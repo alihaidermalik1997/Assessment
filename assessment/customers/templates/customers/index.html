@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment by Ali</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <h2> Assessment </h2>
+    <p> <a id="fetch">Click here</a> to fetch and save users from mifos site <p>
+    <p> <a href="/list_users/">Click here</a> to see list of saved users <p>
+    <p> <a href="/test/">Click here</a> to run unit test <p></p>
+</body>
+
+<script>
+    $(document).ready(function(){
+      $("#fetch").click(function(){
+        $.get("fetch_users/", function(data, status){
+          alert(data["message"]);
+        });
+      });
+    });
+    </script>
+
+</html>
